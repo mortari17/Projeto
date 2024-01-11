@@ -31,13 +31,15 @@ body {
 
   /*background: color image repeat position/size */
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 body * {
   font-family: "Inter", sans-serif;
   color: var(--text-color);
 }
 #container1 {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   /*border: 1px solid white;*/
   margin: auto;
   /*ou margin-right: auto
@@ -77,10 +79,13 @@ body * {
   z-index: 1;
   top: 50%;
   transform: translateY(-50%);
+  animation: slide-back 0.2s;
+}
+#switch button:hover {
+  outline: 8px solid var(--high-light-color);
 }
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.2s forwards;
 }
 #switch span {
   display: block;
@@ -141,4 +146,28 @@ footer {
   padding: 24px;
   text-align: center;
   font-size: 14px;
+}
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
 }
