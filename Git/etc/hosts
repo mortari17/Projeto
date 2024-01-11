@@ -1,0 +1,9 @@
+﻿                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+127.0.0.1 local.prudentte.com.br
+127.0.0.1 rabbitmq.local.prudentte.com.br
+# Added by Docker Desktop
+169.254.173.99 host.docker.internal
+169.254.173.99 gateway.docker.internal
+# To allow the same kube context to work on the host and the container:
+127.0.0.1 kubernetes.docker.internal
+# End of section
